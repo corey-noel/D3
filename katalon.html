@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>katalon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ3 - TestTextPresent</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//form[@action='/']<datalist><option>//form[@action='/']</option><option>//form</option><option>css=form</option></datalist></td><td>*Fibonacci*</td>
+</tr>
+<tr><td>assertText</td><td>xpath=(//form[@action='/'])[2]<datalist><option>xpath=(//form[@action='/'])[2]</option><option>//form[2]</option></datalist></td><td>*Factorial*</td>
+</tr>
+<tr><td>assertText</td><td>xpath=(//form[@action='/'])[3]<datalist><option>xpath=(//form[@action='/'])[3]</option><option>//form[3]</option></datalist></td><td>*Say hello*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ3 - TestButtonsPresent</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td>*Calculate*</td>
+</tr>
+<tr><td>assertValue</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td>*Calculate*</td>
+</tr>
+<tr><td>assertValue</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td>*Hi*</td>
+</tr>
+</tbody></table>
+</body>
+</html>
