@@ -35,17 +35,18 @@ end
 post '/fib' do
   input = parse_num_val params[:fib_val]
   result = fibonacci input
-  puts input
-  puts result
   erb :fibonacci, :locals => { input: input, result: result }
 end
 
 post '/fac' do
-  params[:fac_val]
+  input = parse_num_val params[:fac_val]
+  result = factorial input
+  erb :factorial, :locals => { input: input, result: result }
 end
 
 post '/hello' do
-  params[:hello_val]
+  user_name = params[:hello_val].upcase
+  erb :hello, :locals => { user_name: user_name }
 end
 
 not_found do
