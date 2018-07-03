@@ -33,7 +33,11 @@ get '/' do
 end
 
 post '/fib' do
-  params[:fib_val]
+  input = parse_num_val params[:fib_val]
+  result = fibonacci input
+  puts input
+  puts result
+  erb :fibonacci, :locals => { input: input, result: result }
 end
 
 post '/fac' do
