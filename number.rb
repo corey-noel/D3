@@ -29,22 +29,30 @@ def fibonacci num
 end
 
 get '/' do
-  erb :index
+  if !params[:fib_val].nil?
+    fib
+  elsif !params[:fac_val].nil?
+    fac
+  elsif !params[:hello_val].nil?
+    hello
+  else
+    erb :index
+  end
 end
 
-post '/fib' do
+def fib
   input = parse_num_val params[:fib_val]
   result = fibonacci input
   erb :fibonacci, :locals => { input: input, result: result }
 end
 
-post '/fac' do
+def fac
   input = parse_num_val params[:fac_val]
   result = factorial input
   erb :factorial, :locals => { input: input, result: result }
 end
 
-post '/hello' do
+def hello
   user_name = params[:hello_val].upcase
   erb :hello, :locals => { user_name: user_name }
 end
