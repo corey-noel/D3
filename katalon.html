@@ -188,5 +188,59 @@
 <tr><td>assertText</td><td>//body<datalist><option>//body</option></datalist></td><td>*Hello, VIVIAN!*</td>
 </tr>
 </tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ9 - FibBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td>*Calculate*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ9 - FacBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td>*Calculate*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ9 - HelloBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td>*Calculate*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ10 - 404</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/accordingtoallknownlawsofaviationthereisnowayabeeshouldbeabletofly<datalist><option>http://localhost:4567/accordingtoallknownlawsofaviationthereisnowaythatbeesshouldbeabletofly</option><option>http://localhost:4567/accordingtoallknownlawsofaviationthereisnowayabeeshouldbeabletofly</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>*ERROR*</td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>*That page does not exist*</td>
+</tr>
+</tbody></table>
 </body>
 </html>
