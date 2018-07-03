@@ -8,6 +8,16 @@
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
+<tr><td rowspan="1" colspan="3">RQ1 - Page Present</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>assertTextPresent</td><td><datalist><option></option></datalist></td><td>**</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
 <tr><td rowspan="1" colspan="3">RQ3 - TestTextPresent</td></tr>
 </thead>
 <tbody>
@@ -32,6 +42,150 @@
 <tr><td>assertValue</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td>*Calculate*</td>
 </tr>
 <tr><td>assertValue</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td>*Hi*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ4 - FibZero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td>0</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Fibonacci(0) = 0*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ4 - FibOne</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Fibonacci(1) = 1*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ4 - FibHighVal</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fib_val<datalist><option>name=fib_val</option><option>//input[@name='fib_val']</option><option>//input</option><option>css=input[name="fib_val"]</option></datalist></td><td>20</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Fibonacci(20) = 6765*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ5 - FacZero</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td>0</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Factorial(0) = 1*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ5 - FacOne</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td>1</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Factorial(1) = 1*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ5 - FacHighVal</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=fac_val<datalist><option>name=fac_val</option><option>//input[@name='fac_val']</option><option>//form[2]/input</option><option>css=input[name="fac_val"]</option></datalist></td><td>10</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option><option>css=body</option></datalist></td><td>*Factorial(10) = 3628800 *</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ6 - HiLowercase</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td>jim</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option></datalist></td><td>*Hello, JIM!*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ6 - HiUppercase</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td>CAROL</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option></datalist></td><td>*Hello, CAROL!*</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RQ6 - HiMixed</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=hello_val<datalist><option>name=hello_val</option><option>//input[@name='hello_val']</option><option>//form[3]/input</option><option>css=input[name="hello_val"]</option></datalist></td><td>vIviAN</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//body<datalist><option>//body</option></datalist></td><td>*Hello, VIVIAN!*</td>
 </tr>
 </tbody></table>
 </body>
