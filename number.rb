@@ -32,6 +32,18 @@ get '/' do
   erb :index
 end
 
+post '/fib' do
+  params[:fib_val]
+end
+
+post '/fac' do
+  params[:fac_val]
+end
+
+post '/hello' do
+  params[:hello_val]
+end
+
 not_found do
   status 404
   erb :error404
