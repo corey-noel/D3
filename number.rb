@@ -3,11 +3,7 @@ require 'sinatra'
 def parse_num_val arg
   begin
     res = Integer(arg)
-    if res < 1
-      1
-    else
-      res
-    end
+    [0, res].max
   rescue ArgumentError
     1
   end
