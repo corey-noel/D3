@@ -9,3 +9,5 @@
 ##### Links:
 
 * https://github.com/corey-noel/D3 (this repository)
+
+* https://docs.google.com/document/d/1XGOHwn5H0wivZzjrNXGtb63CMvrrYWS5LmBCDWgE4zE/edit?usp=sharing (cover page and writeup)
